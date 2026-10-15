@@ -1,4 +1,4 @@
-# Cloudflare Workers 配置，线上已由deploy.yml接管，这里仅供本地测试
+# Cloudflare Workers 配置：由 Cloudflare Builds 部署到原有生产资源
 name = "cf-server-monitor"
 main = "src/index.js"
 compatibility_date = "2024-12-01"
@@ -20,6 +20,7 @@ binding = "ASSETS"
 [[d1_databases]]
 binding = "DB"
 database_name = "server-monitor-db"
+database_id = "de58198c-dc13-407b-8fe1-23eb99f7fd7b"
 
 # Durable Objects：实时指标广播中心
 # 注意：首次部署前需要执行 `wrangler durable-object create MetricsBroadcaster --class MetricsBroadcaster`
