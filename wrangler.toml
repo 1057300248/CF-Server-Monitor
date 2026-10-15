@@ -1,5 +1,5 @@
 # Isolated Monitor deployment. This branch must only target the test resources.
-name = "cf-server-monitor-test"
+name = "cf-server-monitor-next"
 account_id = "9d099abd947c3717c0f55bd090b80c39"
 main = "src/index.js"
 compatibility_date = "2024-12-01"
@@ -9,7 +9,7 @@ keep_vars = true
 workers_dev = true
 
 [[routes]]
-pattern = "cf-monitor-test.chuanapi.com"
+pattern = "cf-monitor-next.chuanapi.com"
 custom_domain = true
 
 [observability]
